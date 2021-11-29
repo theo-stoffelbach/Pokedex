@@ -14,7 +14,7 @@
 export default {
   data: () => {
     return {
-      imageUrl: '',
+      imageUrl: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/',
       apiUrl:'https://pokeapi.co/api/v2/pokemon/'
     }
   },
