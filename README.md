@@ -8,6 +8,8 @@ Le projet initiale était de faire un site qui contenait un Pokedex qui pouvait 
 
 # Démarage 
 
+  Dans cet section nous allons voir comment installer notre projet Pokdex 
+
 ## Pré-requis
 
   Pour installer notre site web il vous faudras :
