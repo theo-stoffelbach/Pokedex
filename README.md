@@ -10,6 +10,7 @@ Le projet initiale était de faire un site qui contenait un Pokedex qui pouvait 
 
 ##Pré-requis
 
-  Pour installer notre site web il vous faudras 2 port de libre : port {PORT FRONT-END} ainsi que le port {PORT BACK-END} .\
-  DEDEDEDEDEDEDED\
-  LL
+  Pour installer notre site web il vous faudras :
+    - 2 port de libre : port {PORT FRONT-END} ainsi que le port {PORT BACK-END} .\
+    - Node js
+    - Un navigateur Web 
