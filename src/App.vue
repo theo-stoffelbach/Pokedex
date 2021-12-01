@@ -7,7 +7,7 @@
 
 <script>
   // import PokemonSearch from './pokemonSearch.vue' 
-  import PokemonList from './components/PokemonList.vue' 
+  import PokemonList from './components/pokemon/PokemonList.vue' 
   // import PokemonDetail from './pokemonDetail.vue' 
 
 
