@@ -1,3 +1,8 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 nav {
     background: #000;
     color: #fff;
@@ -18,6 +23,27 @@ nav .mainMenu li a {
     color: #fff ;
 }
 
+nav .mainMenu li a:hover {
+    background: rgb(255, 94, 0);
+}
+nav .openMenu {
+    font-size: 2rem;
+    margin: 20px;
+    display: none;
+    cursor: pointer;
+}
+nav .mainMenu .closeMenu, .icon i {
+    font-size: 2rem;
+    display: none;
+    cursor: pointer;
+}
+
+nav .logo {
+    margin: 6px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
 @media(max-width: 800px){
     nav .mainMenu {
         height: 100vh;
@@ -30,10 +56,33 @@ nav .mainMenu li a {
         justify-content: center;
         align-items: center;
         background: #000;
-        transform: top 1s ease;
-        -webkit-transform: top 1s ease;
-        -moz-transform: top 1s ease;
-        -ms-transform: top 1s ease;
-        -o-transform: top 1s ease;
-}
+        transition: top 1s ease;
+        display: none;
+    }
+    nav .mainMenu .closeMenu {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+    nav .openMenu {
+        display: block;
+    }
+    nav .mainMenu li a:hover {
+        background: none;
+        color: rgb(255, 123, 0);
+        font-size: 1.6rem;
+    }
+    .icons i {
+        display: inline-block;
+        padding: 12px;
+    }
+    nav .openMenu {
+        display: flex;
+        align-items : center
+    }
+    nav .logo {
+        display: flex;
+        align-items: center;
+    }
 }
