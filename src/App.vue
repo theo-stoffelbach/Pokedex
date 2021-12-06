@@ -1,17 +1,17 @@
 <template>
   <Header />
 
-  <h1>DDEDED</h1>
+  <h1 class="Title">DDEDED</h1>
 
   <PokemonList :imageUrl="imageUrl" :apiUrl="apiUrl" />
 </template>
 
 <script>
-import Header from './components/page/Header.vue';
 // import PokemonSearch from './pokemonSearch.vue'
 
 
 import PokemonList from "./components/pokemon/PokemonList.vue";
+import Header from "./components/page/Header.vue";
 
 
 // import PokemonDetail from './pokemonDetail.vue'
@@ -42,6 +42,10 @@ export default {
   margin: 0;
   padding:0;
 
+}
+
+.Title {
+  margin-top: 100px;
 }
 
 #app {

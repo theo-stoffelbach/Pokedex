@@ -1,6 +1,6 @@
 <template>
   <nav>
-    <div class="logo"><h1>Deltaty</h1></div>
+    <div class="logo"><h1>Pokedex</h1></div>
     <div class="openMenu"><i v-on:click="openMenu">Open</i></div>
     <ul class="mainMenu">
       <li><a href="#">Home</a></li>
@@ -9,10 +9,6 @@
       <li><a href="#">Account</a></li>
       <div class="closeMenu">
         <i v-on:click="closeMenu">Close</i>
-        <i class="fab fa-facebook"></i>
-        <i class="fab fa-twitter"></i>
-        <i class="fab fa-instgram"></i>
-        <i class="fab fa-github"></i>
       </div>
     </ul>
   </nav>
@@ -41,6 +37,8 @@ export default {
 </script>
 
 <style>
+
+
 html {
   position: absolute;
   top: 0;
@@ -59,8 +57,9 @@ nav {
 
   height: auto;
   width: 100%;
+  height: 75px;
 
-  background: #000;
+  background: rgb(54, 54, 54);
   color: #fff;
   display: flex;
   justify-content: space-between;
@@ -69,6 +68,10 @@ nav {
 nav .mainMenu {
   display: flex;
   list-style: none;
+  align-items: center;
+
+  margin-right: 75px;
+
 }
 
 nav .mainMenu li a {
@@ -77,10 +80,11 @@ nav .mainMenu li a {
   text-decoration: none;
   text-transform: uppercase;
   color: #fff;
+
 }
 
 nav .mainMenu li a:hover {
-  background: rgb(255, 94, 0);
+  color: rgba(208, 35, 48, 50);
 }
 nav .openMenu {
   font-size: 2rem;
@@ -143,4 +147,6 @@ nav .logo {
     align-items: center;
   }
 }
+
+
 </style>
