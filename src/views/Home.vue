@@ -1,7 +1,8 @@
 <template>
   <body>
-    <h1>Lorem, ipsum dolor.</h1>
-    <div class="grille">
+    <h1>Pokedex</h1>
+    <div class='center'><div class="bar"></div></div>
+    <div class="grille test">
       <article v-for="(pokemon, index) in pokemons" :key="'poke' + index">
         <div class="card item-grey">
           <div class="index_pokemon">
@@ -18,13 +19,13 @@
               pokemons_details[index].types[1].type.name
             }}
           </p>
-
           <div class="pokemon_img">
             <img :src="imageUrl + pokemon.id + '.png'" class="pokemon" />
           </div>
 
           <div class="container-center" style="background: transparent">
-            <a href="#" class="Read-more"> Read more </a>
+            <button  @click="pokemon_id(pokemon.name)" class="Read-more"> Read more </button>
+            
           </div>
         </div>
       </article>
@@ -34,19 +35,24 @@
     </div>
   </body>
 </template>
-
 <script>
 export default {
-  props: ["imageUrl", "apiUrl"],
   data: () => {
     return {
-      pokemons: [],
-      pokemons_details: [],
-      nextUrl: "",
-      currentUrl: "",
+        pokemons: [],
+        pokemons_details: [],
+        imageUrl: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/",
+        nextUrl: "https://pokeapi.co/api/v2/pokemon/",
+        currentUrl: "https://pokeapi.co/api/v2/pokemon/",
     };
   },
   methods: {
+    pokemon_id(pokemon) {
+      console.log("ddede")
+      console.log(pokemon)
+      window.location.href = window.location.href + "pokemon/" + pokemon;
+
+    },
     fetchData() {
       let req = new Request(this.currentUrl);
       fetch(req)
@@ -130,11 +136,26 @@ export default {
 </script>
 
 <style lang="css" scoped>
+
+.center {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
+.bar {
+    width: 90%;
+    height: 5px;
+    background: rgba(128, 128, 128, 0.5);
+    border-radius: 2.5px;
+}
+
 h1 {
   text-align: center;
   font-size: 40px;
   font-family: Arial, Helvetica, sans-serif;
-  margin: 50px 0;
+  margin: 25px 25px;
 }
 
 .grille {
@@ -217,7 +238,7 @@ h5 {
 }
 
 .pokemon {
-  margin-top: 110px;
+  margin-top: 60px;
   height: 240px;
   width: 260px;
   padding: 0 25px 25px 0px;

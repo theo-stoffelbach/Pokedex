@@ -1,17 +1,35 @@
 <template>
   <nav>
-    <div class="logo"><h1>Pokedex</h1></div>
+    <div class="logo">
+      <img
+        class="logo"
+        src="https://github.com/Snakeshader-pro/Pokedex/blob/Th%C3%A9o/SRC_POKEDEX-D-100-POK/logo/logo.png?raw=true"
+        alt=""
+      />
+    </div>
     <div class="openMenu"><i v-on:click="openMenu">Open</i></div>
     <ul class="mainMenu">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Products</a></li>
-      <li><a href="#">Contact</a></li>
-      <li><a href="#">Account</a></li>
+      <div class="hamburger">
+        <li><router-link to="/"> Pokedex</router-link></li>
+        <li><router-link to="/Team">Team</router-link></li>
+        <li><router-link to="/Friend">Friend</router-link></li>
+        <li><router-link to="/Account">Account</router-link></li>
+      </div>
+
       <div class="closeMenu">
         <i v-on:click="closeMenu">Close</i>
       </div>
     </ul>
   </nav>
+  <div class="margin"></div>
+
+  <router-view />
+
+  <link
+    href="//db.onlinewebfonts.com/c/a222402127a0453c817a6cf4c3d9810b?family=Pokemon"
+    rel="stylesheet"
+    type="text/css"
+  />
 </template>
 
 <script>
@@ -37,7 +55,10 @@ export default {
 </script>
 
 <style>
-
+.margin {
+  margin-top: 74px;
+  height: 1px;
+}
 
 html {
   position: absolute;
@@ -51,13 +72,19 @@ html {
   padding: 0;
 }
 
+.hamburger {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  margin-right: 50px;
+}
+
 nav {
   position: absolute;
   top: 0;
 
-  height: auto;
-  width: 100%;
   height: 75px;
+  width: 100%;
 
   background: rgb(54, 54, 54);
   color: #fff;
@@ -71,7 +98,6 @@ nav .mainMenu {
   align-items: center;
 
   margin-right: 75px;
-
 }
 
 nav .mainMenu li a {
@@ -80,7 +106,6 @@ nav .mainMenu li a {
   text-decoration: none;
   text-transform: uppercase;
   color: #fff;
-
 }
 
 nav .mainMenu li a:hover {
@@ -100,40 +125,58 @@ nav .mainMenu .closeMenu,
 }
 
 nav .logo {
-  margin: 6px;
+  margin-left: 12px;
   font-size: 25px;
   cursor: pointer;
+  width: 75px;
+  height: 75px;
+}
+
+img .logo {
+  width: 75px;
+  height: 75px;
 }
 
 @media (max-width: 800px) {
+  a .router-link-active {
+    color: blueviolet;
+    background: violet;
+  }
+
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    height: auto;
+    margin: 0;
+  }
+
   nav .mainMenu {
     height: 100vh;
     position: fixed;
+    margin-right: 0;
+
+    justify-content: center;
+
     top: 0;
     right: 0;
     left: 0;
     z-index: 10;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: #000;
+    background: rgb(54, 54, 54);
     transition: top 1s ease;
-    display: none;
   }
   nav .mainMenu .closeMenu {
     display: block;
     position: absolute;
-    top: 20px;
-    right: 20px;
+
+    top: 40px;
+    right: 40px;
   }
   nav .openMenu {
     display: block;
   }
-  nav .mainMenu li a:hover {
-    background: none;
-    color: rgb(255, 123, 0);
-    font-size: 1.6rem;
-  }
+
   .icons i {
     display: inline-block;
     padding: 12px;
@@ -147,6 +190,4 @@ nav .logo {
     align-items: center;
   }
 }
-
-
 </style>
