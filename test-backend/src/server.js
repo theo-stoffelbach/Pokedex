@@ -1,3 +1,24 @@
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyBZqiKxOaKx5oE02MGxUEpjxj0n8CxhhLQ",
+  authDomain: "pokedex-b1691.firebaseapp.com",
+  projectId: "pokedex-b1691",
+  storageBucket: "pokedex-b1691.appspot.com",
+  messagingSenderId: "760827219857",
+  appId: "1:760827219857:web:88f7ec617af58638fa9430",
+  measurementId: "${config.measurementId}"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
 const express = require("express");
 const bodyParser = require("body-parser");
 const { MongoClient } = require("mongodb")
