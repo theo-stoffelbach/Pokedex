@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router";
-import Account from '@/views/Account.vue';
+import Account from '@/views/account/Log-in.vue';
 import Friend from '@/views/Friend.vue';
 import Home from '@/views/Home.vue';
 import Team from '@/views/Team.vue';
@@ -9,7 +9,7 @@ import Pokemon from '@/views/Pokemon.vue';
 const routes = [
     {
         name: 'Account',
-        path: "/Account",
+        path: "/Account/log-in",
         component: Account,
     },
     {

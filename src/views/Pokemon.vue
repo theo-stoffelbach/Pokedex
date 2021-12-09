@@ -13,7 +13,7 @@
         <p class="Text">Weight : {{ pokemons_detail[3] }}</p>
         <p class="Text">Height : {{ pokemons_detail[4] }}</p>
         <p class="Text">Types : {{ pokemons_detail[5] }}</p>
-        <p class="Text">Types : {{ pokemons_detail[6] }}</p>
+        <p class="Text">Weakness : {{ pokemon_weakness[0] }}</p>
         
       </div>
     </div>
@@ -27,12 +27,12 @@ export default {
   data: () => {
     return {
       pokemons_details: [],
+      pokemon_weakness: [],
     };
   },
   methods: {
-    test() {
-      console.log(this.pokemons_details[0].forms[0].name);
-    },
+    // test() {
+    // },
   },
   mounted() {
     let url = "https://pokeapi.co/api/v2/pokemon/" + this.name_pokemon;
@@ -75,43 +75,51 @@ export default {
           let url = data.types[0].type.url;
           let req = new Request(url);
 
-          fetch(req)
+          fetch(req) // PREMIER VERIFEEE ----------------------------------------------------
             .then((resp) => {
               if (resp.status === 200) return resp.json();
             })
             .then((donnees) => {
               let damage = donnees.damage_relations.double_damage_from;
               for (let i = 0; i < damage.length; i++) {
-              
-                if(i == 0) Weakness = damage[i].name + " "
-                else Weakness = Weakness + damage[i].name + " "
-                console.log(Weakness)
+                if(i == 0) Weakness = damage[i].name;
+                else Weakness =  Weakness + " and " + damage[i].name 
 
               }
               push_pokemon.push(Weakness);
-
+              this.pokemon_weakness.push(Weakness);
             });
 
           types = types[0].type.name;
         } else {
-          types = types[0].type.name + " and " + types[1].type.name;
-
           let url = data.types[0].type.url;
           let req = new Request(url);
+          // let Weakness_list = [];
 
-          fetch(req)
+          fetch(req) // DEUXIEMEEEEEEEEEEEEEEE VERIFEEE ----------------------------------------------------
             .then((resp) => {
               if (resp.status === 200) return resp.json();
             })
             .then((donnees) => {
               let damage = donnees.damage_relations.double_damage_from;
-              console.log(damage);
+              for (let i = 0; i < damage.length; i++) {
+                if(i == 0) {
+                  Weakness = damage[i].name;
+                  // Weakness_list.push(Weakness);
+                  }
+                else {
+                  // Weakness_list.push(Weakness);
+                  Weakness =  Weakness + " and " + damage[i].name 
+                  }
+
+              push_pokemon.push(Weakness);
+              }
             });
 
           let url_2 = data.types[1].type.url;
           let req_2 = new Request(url_2);
 
-          fetch(req_2)
+          fetch(req_2) 
             .then((resp) => {
               if (resp.status === 200) return resp.json();
             })
@@ -119,6 +127,7 @@ export default {
               let damage = donnees_2.damage_relations.double_damage_from;
               for (let i = 0; i < damage.length; i++) {
                 for (let j = 0; j < Weakness.length; j++) {
+                  
                   console.log(Weakness[j]);
                 }
                 Weakness.push(damage[i].name);
@@ -133,14 +142,12 @@ export default {
         push_pokemon.push(taille);
         push_pokemon.push(types);
 
-        console.log(push_pokemon)
-
         this.pokemons_details.push(push_pokemon);
-        console.log(this.pokemons_details)
+        console.log(push_pokemon)
       });
   },
-  
 };
+
 </script>
 
 <style>
