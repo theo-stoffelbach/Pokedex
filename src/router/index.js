@@ -7,7 +7,6 @@ import Pokemon from '@/views/Pokemon.vue';
 
 
 const routes = [
-
     {
         name: 'Account',
         path: "/Account",

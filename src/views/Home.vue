@@ -19,13 +19,14 @@
               pokemons_details[index].types[1].type.name
             }}
           </p>
+
           <div class="pokemon_img">
             <img :src="imageUrl + pokemon.id + '.png'" class="pokemon" />
           </div>
 
           <div class="container-center" style="background: transparent">
             <button  @click="pokemon_id(pokemon.name)" class="Read-more"> Read more </button>
-            
+
           </div>
         </div>
       </article>
@@ -68,6 +69,7 @@ export default {
                 return !!part;
               })
               .pop();
+
             let reqq = new Request(
               `https://pokeapi.co/api/v2/pokemon/${pokemon.id}/`
             );
@@ -98,6 +100,8 @@ export default {
 
             if (pokemon.id.length == 1) pokemon.id = "00" + pokemon.id;
             if (pokemon.id.length == 2) pokemon.id = "0" + pokemon.id;
+
+            if (pokemon.id > 1000) { return console.log("yeah")}
 
             console.log(this.pokemons_details);
             this.pokemons.push(pokemon);

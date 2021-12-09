@@ -3,7 +3,7 @@
     <div class="logo">
       <img
         class="logo"
-        src="https://github.com/Snakeshader-pro/Pokedex/blob/Th%C3%A9o/SRC_POKEDEX-D-100-POK/logo/logo.png?raw=true"
+        src="https://github.com/Snakeshader-pro/Pokedex/blob/Th%C3%A9o/src/assets/logo_pokemon,.png?raw=true"
         alt=""
       />
     </div>
