@@ -19,7 +19,7 @@ let signUpButton = document.getElementById("signin")
 signUpButton.addEventListener("click", (e) => {
     //Prevent default behavor
     e.preventDefault()
-    console.log("clicked")
+   
 
     var email = document.getElementById("inputemail")
     var password = document.getElementById("inputpassword")
