@@ -148,10 +148,7 @@ export default {
 
 <style>
 
-/* html {
-  overflow-y: hidden; 
-  overflow-x: hidden;
-} */
+
 
 .title {
   margin: 25px 0;

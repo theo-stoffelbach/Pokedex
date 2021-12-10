@@ -17,11 +17,19 @@
       <form>
         <span>
           <i class="fa fa-user"></i>
-          <input type="text" placeholder="Username" name="" /> </span
+          <input type="text" placeholder="Username" name="username" /> </span
         ><br />
         <span>
           <i class="fa fa-lock"></i>
-          <input type="password" placeholder="password" name="" /> </span
+          <input type="password" placeholder="password" name="password" /> </span
+        ><br />
+        <span>
+          <i class="fa fa-lock"></i>
+          <input type="password" placeholder="Confirm password" name="Confirm_password" /> </span
+        ><br />
+        <span>
+          <i class="fa fa-lock"></i>
+          <input type="email" placeholder="Email" name="email" /> </span
         ><br />
         <button>login</button>
       </form>
@@ -36,10 +44,6 @@
 export default {
   name: "Pokemon",
   props: ["id"],
-  mounted() {
-    document.getElementById("html").style.overflow = "hidden";
-
-}
 };  
 </script>
 

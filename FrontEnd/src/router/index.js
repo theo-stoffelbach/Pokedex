@@ -1,5 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
-import Account from '@/views/account/Log-in.vue';
+import Login from '@/views/account/Log-in.vue';
+import Register from '@/views/account/Register.vue';
+
 import Friend from '@/views/Friend.vue';
 import Home from '@/views/Home.vue';
 import Team from '@/views/Team.vue';
@@ -8,16 +10,13 @@ import Json from '@/views/account/json.vue';
 
 
 const routes = [
-    {
-        name: 'Account',
-        path: "/Account/log-in",
-        component: Account,
-    },
+
     {
         name: 'Json',
         path: "/Account/Json",
         component: Json,
     },
+
     {
         name: 'Friend',
         path: "/Friend",
@@ -33,6 +32,16 @@ const routes = [
         path: "/Pokemon/:name_pokemon",
         component: Pokemon,
         props: true,
+    },
+    {
+        name: 'Login',
+        path: "/Account/log-in",
+        component: Login,
+    },
+    {
+        name: 'Register',
+        path: "/Account/Register",
+        component: Register,
     },
     {
         name: 'Home',
