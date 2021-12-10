@@ -93,6 +93,5 @@ body {
     position: relative;
     right: 550px; 
     height: 190px;
-    
 }
 </style>
