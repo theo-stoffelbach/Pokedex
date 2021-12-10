@@ -2,14 +2,14 @@
     <body>
         <div class = "all_txt">
             <div class = "first_text">
-                <div class = "text_pika"><p>Pikachu</p></div>
-                <div class = "text_charm"><p>Charmander</p></div>
-                <div class = "text_pidgey"><p>Pidgey</p></div>
+                <p class = "text_pika">Pikachu</p>
+                <p class = "text_charm">Charmander</p>
+                <p class = "text_pidgey">Pidgey</p>
             </div>
             <div class = "second_text">
-                <div class = "text_bulb"><p>Bulbasaure</p></div>
-                <div class = "text_squir"><p>Squirtle</p></div>
-                <div class = "text_blast"><p>Blastoise</p></div>
+                <p class = "text_bulb">Bulbasaure</p>
+                <p class = "text_squir">Squirtle</p>
+                <p class = "text_blast">Blastoise</p>
             </div>
         </div>
         <div class = "pikachu_img"><img src="../assets/Pikachu.png"></div>
@@ -22,7 +22,6 @@ export default ({
 })
 </script>
 
-//300px width
 <style>
 body {
     background-color: #121233;
@@ -30,16 +29,17 @@ body {
 .all_text {
     justify-content: space-between;
 }
-.first_text {
+/* change opacity for the background*/
+.first_text { 
     margin-top: 6em;
+    display: flex;
+    width: 300px;
     position: absolute;
     top: -16px;
     right: 0em;
-    color: #f88;
-    display: flex;
-    width: 300px;
     flex-direction: column;
     margin-right: 15em; 
+    color: #f88;
 }
 .second_text {
     position: absolute;
@@ -52,10 +52,14 @@ body {
     margin-left: 15em;
 }
 .text_pika {
+    background-image: url("../assets/background_pika.png");
+    background-size: 50%;
     font-size: 30px;
     height: 70px;
     border: yellow 2px solid;
     border-radius: 30px;
+    padding-left: 50px;
+    padding-top: 30px;
 }
 .text_charm {
     border: red 2px solid;
@@ -88,10 +92,14 @@ body {
     height: 70px;
 }
 .pikachu_img {
-    border: red 2px solid;
     display: inline;
     position: relative;
-    right: 550px; 
-    height: 190px;
+    right: -280px;
+    top: 20px;
 }
+img {
+    width: 90px;
+	height: 90px;
+}
+
 </style>
