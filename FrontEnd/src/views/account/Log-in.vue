@@ -1,4 +1,14 @@
 <template>
+<body style="
+  font-family: sans-serif;
+  background-image: url(https://raw.githubusercontent.com/Snakeshader-pro/Pokedex/Th%C3%A9o/src/assets/bulbasaur-pokemon-dt-3840x2160.jpg);
+  background-repeat: no-repeat;
+  overflow: hidden;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  ">
+    
   <div class="container">
     <div class="header">
       <h1>login</h1>
@@ -17,31 +27,30 @@
       </form>
     </div>
   </div>
+  </body>
 </template>
+
+
 
 <script>
 export default {
   name: "Pokemon",
   props: ["id"],
-};
+};  
 </script>
+
+
 
 <style scoped>
 body {
-  font-family: sans-serif;
-  background-image: url("");
-  background-repeat: no-repeat;
-  overflow: hidden;
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
+    height: 1080px;
 }
 
 .container {
   width: 380px;
   margin: 7% auto;
   border-radius: 25px;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(200, 200, 200, 0.5);
   box-shadow: 0 0 17px #333;
 }
 

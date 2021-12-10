@@ -9,3 +9,9 @@ export default ({
     props: ['id']
 })
 </script>
+
+<style scoped>
+body {  
+  background-image: none;
+}
+</style>

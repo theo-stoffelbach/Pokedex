@@ -14,6 +14,7 @@
         <li><router-link to="/Team">Team</router-link></li>
         <li><router-link to="/Friend">Friend</router-link></li>
         <li><router-link to="/Account/Log-in">Account</router-link></li>
+        <li><router-link to="/Account/json">Account</router-link></li>
       </div>
 
       <div class="closeMenu">
@@ -35,6 +36,7 @@
 <script>
 export default {
   name: "Header",
+  props: ["id"],
   methods: {
     openMenu() {
       const mainMenu = document.querySelector(".mainMenu");
@@ -55,16 +57,9 @@ export default {
 </script>
 
 <style>
-.margin {
-  margin-top: 74px;
-  height: 1px;
-}
 
-html {
-  position: absolute;
-  top: 0;
-  height: 100%;
-  width: 100%;
+body {
+  margin: 0;
 }
 
 * {

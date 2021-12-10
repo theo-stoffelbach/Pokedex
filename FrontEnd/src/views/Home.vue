@@ -1,5 +1,4 @@
 <template>
-  <body>
     <h1>Pokedex</h1>
     <div class='center'><div class="bar"></div></div>
     <div class="grille test">
@@ -34,7 +33,6 @@
         <i class="fas fa-spinner fa-spin"></i>
       </div>
     </div>
-  </body>
 </template>
 <script>
 export default {
@@ -101,7 +99,7 @@ export default {
             if (pokemon.id.length == 1) pokemon.id = "00" + pokemon.id;
             if (pokemon.id.length == 2) pokemon.id = "0" + pokemon.id;
 
-            if (pokemon.id > 1000) { return console.log("yeah")}
+            if (pokemon.id > 1000) return console.log("yeah")
 
             console.log(this.pokemons_details);
             this.pokemons.push(pokemon);
@@ -139,7 +137,11 @@ export default {
 };
 </script>
 
-<style lang="css" scoped>
+<style scoped>
+
+body {  
+    background-image: none;
+}
 
 .center {
     width: 100%;

@@ -30,10 +30,6 @@ export default {
       pokemon_weakness: [],
     };
   },
-  methods: {
-    // test() {
-    // },
-  },
   mounted() {
     let url = "https://pokeapi.co/api/v2/pokemon/" + this.name_pokemon;
     let req = new Request(url);
@@ -151,6 +147,12 @@ export default {
 </script>
 
 <style>
+
+/* html {
+  overflow-y: hidden; 
+  overflow-x: hidden;
+} */
+
 .title {
   margin: 25px 0;
   text-decoration: underline;
