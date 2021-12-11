@@ -1,6 +1,6 @@
 <template>
     <body>
-        <div class = "all_txt">
+        <div id = "all_txt">
             <div class = "first_text">
                 <p class = "text_pika">Pikachu</p>
                 <p class = "text_charm">Charmander</p>
@@ -26,8 +26,8 @@ export default ({
 body {
     background-color: #121233;
 }
-.all_text {
-    justify-content: space-between;
+#all_text {
+   border: red 2px solid;
 }
 /* change opacity for the background*/
 .first_text { 
@@ -41,7 +41,6 @@ body {
     margin-right: 15em; 
     color: #f88;
     max-width: 1300px;
-    width: 300px;
 }
 .second_text {
     position: absolute;
