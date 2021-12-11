@@ -1,105 +1,120 @@
 <template>
-    <body>
-        <div id = "all_txt">
-            <div class = "first_text">
-                <p class = "text_pika">Pikachu</p>
-                <p class = "text_charm">Charmander</p>
-                <p class = "text_pidgey">Pidgey</p>
-            </div>
-            <div class = "second_text">
-                <p class = "text_bulb">Bulbasaure</p>
-                <p class = "text_squir">Squirtle</p>
-                <p class = "text_blast">Blastoise</p>
-            </div>
-        </div>
-        <div class = "pikachu_img"><img src="../assets/Pikachu.png"></div>
-    </body>
+  <body>
+    <div id="container1" style="margin-top: 4em">
+      <p class="item_pik">Pikachu</p>
+      <p class="item_cha">Charmander</p>
+      </div>
+    <div id="container2" style="margin-top: 2em">
+      <p class="item_pid">Pidgey</p>
+      <p class="item_bul">Bulbasaure</p>
+    </div>
+    <div id="container3" style="margin-top: 2em">
+      <p class="item_sqr">Squirtle</p>
+      <p class="item_bla">Blastoise</p>
+    </div>
+    <div class="pik_img"><img src="../assets/team/pik_img.png"></div>
+    <div class="cha_img"><img src="../assets/team/cha_img.png"></div>
+    <div class="pid_img"><img src="../assets/team/pid_img.png"></div>
+    <div class="bul_img"><img src="../assets/team/bul_img.png"></div>
+    <div class="sqr_img"><img src="../assets/team/sqr_img.png"></div>
+    <div class="bla_img"><img src="../assets/team/bla_img.png"></div>
+  </body>
 </template>
 
 <script>
-export default ({
-    name: 'Team_pok',
-})
+export default {
+  name: "Team_pok",
+};
 </script>
 
 <style>
-body {
-    background-color: #121233;
+
+#container1 {
+    color:#f88; 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 30px
 }
-#all_txt {
-   border: red 2px solid;
-   max-width: 300px;
-   display: grid;
-   margin-top: 6em;
-   grid-template-columns: 300px 300px;
-   grid-gap: 450px;
-   margin-left : 15em;
-   margin-right: 15em;
-   width: auto;
-}
-/* change opacity for the background*/
-.first_text { 
+
+#container2 {
     color: #f88;
-    width: 250px;
+    display: flex;
+    width: auto;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 30px;
 }
-.second_text {
+
+#container3 {
     color: #f88;
-    width: 250px;
-}
-.text_pika {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
     font-size: 30px;
-    height: 70px;
-    border: yellow 2px solid;
-    border-radius: 30px;
-    padding-left: 50px;
-    padding-top: 30px;
 }
-.text_charm {
-    border: red 2px solid;
-    border-radius: 30px;
-    padding-left: 50px;
-    padding-top: 30px;
-    font-size: 30px;
-    height: 70px;
+
+.item_pid {
+    border: solid grey;
+    border-radius: 25px;
+    padding-left: 2em;
+    width  : 8em;
+    height : 2em;
 }
-.text_pidgey {
-    border: grey 2px solid;
-    border-radius: 30px;
-    padding-left: 50px;
-    padding-top: 30px; 
-    font-size: 30px;
-    height: 70px;
+
+.item_sqr {
+    border: solid blue;
+    border-radius: 25px;
+    padding-left: 2em;
+    width  : 8em;
+    height : 2em;
 }
-.text_bulb {
-    border: green 2px solid;
-    border-radius: 30px;
-    padding-left: 50px;
-    padding-top: 30px;
-    font-size: 30px;
-    height: 70px;
+.item_bul {
+    border: solid green;
+    border-radius: 25px;
+    padding-left: 2em;
+    width  : 8em;
+    height : 2em;
 }
-.text_squir {
-    border: blue 2px solid;
-    border-radius: 30px;
-    padding-left: 50px;
-    padding-top: 30px;
-    font-size: 30px;
-    height: 70px;
+.item_pik {
+    border: solid yellow;
+    border-radius: 25px;
+    padding-left: 2em;
+    width  : 8em;
+    height : 2em;
 }
-.text_blast {
-    border: #3b147b 2px solid;
-    border-radius: 30px;
-    padding-left: 50px;
-    padding-top: 30px;
-    font-size: 30px;
-    height: 70px;
+.item_cha {
+    border: solid red;
+    border-radius: 25px;
+    padding-left: 2em;
+    width  : 8em;
+    height : 2em;
 }
-.pikachu_img {
-    display: inline;
-    position: relative;
-    right: -280px;
-    top: 20px;
-    width: 90px;
-	height: 90px;
+.item_bla {
+    border: solid #3b147b;
+    border-radius: 25px;
+    padding-left: 2em;
+    width  : 8em;
+    height : 2em;
+}
+/*make responsive img*/ 
+.pik_img{
+    position: absolute;
+    top: 115px;
+    left: 240px;
+}
+.pik_img img {
+    width: 68px;
+}
+@media screen and (max-width: 768px) {
+    #container1 {
+        flex-direction: column;
+    }
+    #container2 {
+        flex-direction: column;
+    }
+    #container3 {
+        flex-direction: column;
+    }
 }
 </style>
