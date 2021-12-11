@@ -28,6 +28,9 @@ export default {
 </script>
 
 <style>
+body {
+    background-color: #121233;
+}
 
 #container1 {
     color:#f88; 
