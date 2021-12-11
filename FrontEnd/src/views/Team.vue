@@ -40,6 +40,8 @@ body {
     flex-direction: column;
     margin-right: 15em; 
     color: #f88;
+    max-width: 1300px;
+    width: 300px;
 }
 .second_text {
     position: absolute;
@@ -47,9 +49,10 @@ body {
     color: #f88;
     margin-top: 5em;
     display: flex;
-    width: 300px;
     flex-direction: column;
     margin-left: 15em;
+    max-width: 1300px;
+    width: 300px;
 }
 .text_pika {
     font-size: 30px;
@@ -107,5 +110,4 @@ body {
     width: 90px;
 	height: 90px;
 }
-
 </style>
