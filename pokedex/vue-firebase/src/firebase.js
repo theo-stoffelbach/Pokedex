@@ -38,5 +38,6 @@ export const userLoadUsers = () => {
         users.value = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data()}))
 
     })
+    onUnmounted(close)
     return users
 }
