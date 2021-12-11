@@ -26,32 +26,25 @@ export default ({
 body {
     background-color: #121233;
 }
-#all_text {
+#all_txt {
    border: red 2px solid;
+   max-width: 300px;
+   display: grid;
+   margin-top: 6em;
+   grid-template-columns: 300px 300px;
+   grid-gap: 450px;
+   margin-left : 15em;
+   margin-right: 15em;
+   width: auto;
 }
 /* change opacity for the background*/
 .first_text { 
-    margin-top: 6em;
-    display: flex;
-    width: 300px;
-    position: absolute;
-    top: -16px;
-    right: 0em;
-    flex-direction: column;
-    margin-right: 15em; 
     color: #f88;
-    max-width: 1300px;
+    width: 250px;
 }
 .second_text {
-    position: absolute;
-    top: 0px;
     color: #f88;
-    margin-top: 5em;
-    display: flex;
-    flex-direction: column;
-    margin-left: 15em;
-    max-width: 1300px;
-    width: 300px;
+    width: 250px;
 }
 .text_pika {
     font-size: 30px;
