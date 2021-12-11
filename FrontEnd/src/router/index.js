@@ -5,6 +5,7 @@ import Register from '@/views/account/Register.vue';
 import Friend from '@/views/Friend.vue';
 import Home from '@/views/Home.vue';
 import Team from '@/views/Team.vue';
+import Team_theo from '@/views/Team_theo.vue';
 import Pokemon from '@/views/Pokemon.vue';
 import Json from '@/views/account/json.vue';
 
@@ -26,6 +27,11 @@ const routes = [
         name: 'Team',
         path: '/Team',
         component: Team,
+    },
+    {
+        name: 'Team_theo',
+        path: '/Team_theo',
+        component: Team_theo,
     },
     {
         name: 'Pokemon',

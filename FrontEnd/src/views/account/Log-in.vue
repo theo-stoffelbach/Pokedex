@@ -8,7 +8,7 @@
   background-attachment: fixed;
   background-position: center;
   ">
-    
+   
   <div class="container">
     <div class="header">
       <h1>login</h1>
@@ -17,13 +17,12 @@
       <form>
         <span>
           <i class="fa fa-user"></i>
-          <input type="text" placeholder="Username" name="" /> </span
+          <input type="text" placeholder="Username" name="" v-model="email"/> </span
         ><br />
         <span>
           <i class="fa fa-lock"></i>
           <input type="password" placeholder="password" name="" /> </span
         ><br />
-        <button>login</button>
       </form>
     </div>
   </div>
@@ -33,9 +32,29 @@
 
 
 <script>
+// import firebase from 'firebase';
 export default {
   name: "Pokemon",
   props: ["id"],
+  data() {
+    return {
+      email:"",
+      password:"",
+    }
+  },
+  methods: {
+    login: function() {
+      // firebase.auth().signInWithEmailAndPassword(this.email, this.password)
+      // .then(
+      //   user => {
+      //     console.log(user.data)
+      //   },
+      //   err => {
+      //     alert(err);
+      //   }
+      // );
+    }
+  },
   mounted() {
     document.getElementById("html").style.overflow = "hidden";
 
