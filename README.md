@@ -30,7 +30,7 @@ Le projet initiale était de faire un site qui contenait un Pokedex qui pouvait 
 
 Pour démaré le code il suffit de :
 
-1. Ouvrir le fichier avec une CMD puis de rentré dans le dossier lancer le serveur Front-End avec la commande `npm run serve`.
+1. Ouvrir le fichier avec une CMD puis de rentré dans le dossier lancer l'installation des dépendences avec la commande `npm i firebase -g@vue/cli vue-router@next`.Et de lancer les serveur avec : ` npm run serve `
 2. Réouvrir une autre CMD à travers le dossier Front-end puis de lancer le serveur avec la commande ` npm run serve`.
 
 Puis voila les 2 serveur sont lancé plus qu'a écrire sur la barre de recherche : `http://localhost:8080` ou de cliquer sur ce lien : [cliquer ici](https://localhost:8080) .
