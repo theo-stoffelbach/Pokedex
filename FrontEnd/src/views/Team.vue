@@ -19,20 +19,20 @@
       </div>
 
       <div>
-        <div class="pid_img"><img src="../assets/team/bul_img.png" /></div>
-        <p class="item_pid">Bulbasaure</p>
+        <div class="bul_img"><img src="../assets/team/bul_img.png" /></div>
+        <p class="item_bul">Bulbasaure</p>
       </div>
     </div>
 
     <div id="container3" style="margin-top: 2em">
       <div>
         <div class="sqr_img"><img src="../assets/team/sqr_img.png" /></div>
-        <p class="item_pid">Squirtle</p>
+        <p class="item_sqr">Squirtle</p>
       </div>
 
       <div>
         <div class="bla_img"><img src="../assets/team/bla_img.png" /></div>
-        <p class="item_pid">Blastoise</p>
+        <p class="item_bla">Blastoise</p>
       </div>
     </div>
 
@@ -70,157 +70,183 @@ export default {
 </script>
 
 <style>
+
 #grid {
-  max-width: 1500px;
-  width: 90%;
-  height: auto;
-  margin: 30px auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 100px);
-  grid-gap: 5px;
-  justify-content: center;
-  border: green 2px solid;
+    max-width: 1500px;
+    width: 90%;
+    height: auto;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 100px);
+    grid-gap: 5px;
+    justify-content: center;
+    border: green 2px solid;
 }
 
 .cards {
-  position: relative;
-  border-radius: 25px;
-  height: auto;
-  width: 100px;
-  height: 100px;
-  background: #444;
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+    position: relative;
+    border-radius: 25px;
+    height: auto;
+    width: 100px;
+    height: 100px;
+    background: #444;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
 }
 
 .image_cards {
-  width: 100px;
-  height: 100px;
+    width: 100px;
+    height: 100px;
 }
 
 body {
-  background-color: #121233;
+    background-color: #121233;
 }
 
 #container1 {
-  position: relative;
-
-  color: #f88;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  font-size: 30px;
+    position: relative;
+    color: #f88;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 30px;
 }
 
 #container2 {
-  color: #f88;
-  display: flex;
-  width: auto;
-  flex-direction: row;
-  justify-content: space-around;
-  font-size: 30px;
+    color: #f88;
+    display: flex;
+    width: auto;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 30px;
 }
 
 #container3 {
-  color: #f88;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  font-size: 30px;
+    color: #f88;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 30px;
 }
 
 .item_pid {
-  border: solid grey;
-  border-radius: 25px;
-  padding-left: 2em;
-  width: 8em;
-  height: 2em;
+    border: solid grey;
+    border-radius: 25px;
+    padding-left: 2em;
+    width: 8em;
+    height: 2em;
 }
 
 .item_sqr {
-  border: solid blue;
-  border-radius: 25px;
-  padding-left: 2em;
-  width: 8em;
-  height: 2em;
+    border: solid blue;
+    border-radius: 25px;
+    padding-left: 2em;
+    width: 8em;
+    height: 2em;
 }
+
 .item_bul {
-  border: solid green;
-  border-radius: 25px;
-  padding-left: 2em;
-  width: 8em;
-  height: 2em;
+    border: solid green;
+    border-radius: 25px;
+    padding-left: 2em;
+    width: 8em;
+    height: 2em;
+    margin-top: 20px;
 }
+
 .item_pik {
-  border: solid yellow;
-  border-radius: 25px;
-  padding-left: 2em;
-  width: 8em;
-  height: 2em;
+    border: solid yellow;
+    border-radius: 25px;
+    padding-left: 2em;
+    width: 8em;
+    height: 2em;
 }
+
 .item_cha {
-  border: solid red;
-  border-radius: 25px;
-  padding-left: 2em;
-  width: 8em;
-  height: 2em;
+    border: solid red;
+    border-radius: 25px;
+    padding-left: 2em;
+    width: 8em;
+    height: 2em;
+    margin-top: 20px;
 }
+
 .item_bla {
-  border: solid #3b147b;
-  border-radius: 25px;
-  padding-left: 2em;
-  width: 8em;
-  height: 2em;
+    border: solid #3b147b;
+    border-radius: 25px;
+    padding-left: 2em;
+    width: 8em;
+    height: 2em;
+    margin-top: 20px;
 }
+
 /* -- IMG --*/
 /* make margin in _img*/
 .pik_img {
-  position: relative;
+    margin-top: 20px;
+    position: relative;
 }
+
 .pik_img img {
-  position: absolute;
-  left: 25px;
-  width: 60px;
+    position: absolute;
+    left: 25px;
+    width: 60px;
 }
+
 .cha_img {
-  position: relative;
+    position: relative;
 }
+
 .cha_img img {
-  position: absolute;
-  left: 25px;
-  width: 57px;
+    margin-top: 20px;
+    position: absolute;
+    left: 25px;
+    width: 57px;
 }
+
 .pid_img {
-  position: relative;
+    position: relative;
+    margin-top: 20px;
 }
+
 .pid_img img {
-  position: absolute;
-  left: 25px;
-  width: 57px;
+    position: absolute;
+    left: 25px;
+    width: 57px;
 }
+
 .sqr_img {
-  position: relative;
+    margin-top: 20px;
+    position: relative;
 }
+
 .sqr_img img {
-  position: absolute;
-  left: 25px;
-  width: 57px;
+    position: absolute;
+    left: 25px;
+    width: 57px;
 }
+
 .bla_img {
-  position: relative;
+    position: relative;
 }
+
 .bla_img img {
-  position: absolute;
-  left: 25px;
-  width: 57px;
+    margin-top: 20px;
+    position: absolute;
+    left: 25px;
+    width: 57px;
 }
-.bul_item {
-  position: relative;
+
+.bul_img {
+    position: relative;
 }
-.bul_item img {
-  position: absolute;
-  left: 25px;
-  width: 57px;
+
+.bul_img img {
+    margin-top: 20px;
+    position: absolute;
+    left: 25px;
+    width: 57px;
 }
+
 @media screen and (max-width: 768px) {
   #container1 {
     flex-direction: column;
