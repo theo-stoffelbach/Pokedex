@@ -26,8 +26,11 @@ export default {
   props: ["name_pokemon"],
   data: () => {
     return {
-      pokemons_details: [],
-      pokemon_weakness: [],
+        pokemons: [],
+        pokemons_details: [],
+        imageUrl: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/",
+        nextUrl: "https://pokeapi.co/api/v2/pokemon/",
+        currentUrl: "https://pokeapi.co/api/v2/pokemon/",
     };
   },
   mounted() {
