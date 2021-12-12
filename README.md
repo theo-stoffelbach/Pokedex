@@ -1,6 +1,6 @@
 # Pokemon Project
 
-![Banner](https://github.com/Snakeshader-pro/Pokedex/blob/main/image/pokemon%20Banner.png)
+![Banner](https://github.com/Snakeshader-pro/Pokedex/blob/main/image/banner/pokemon%20Banner.png)
 
 # Somaire
 
