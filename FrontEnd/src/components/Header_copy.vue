@@ -13,8 +13,7 @@
         <li><router-link to="/"> Pokedex</router-link></li>
         <li><router-link to="/Team">Team</router-link></li>
         <li><router-link to="/Friend">Friend</router-link></li>
-        <li><router-link to="/Account/Log-in">Account</router-link></li>
-        <li><router-link to="/Account/json">Account</router-link></li>
+        <li><router-link to="/Account/Login">Account</router-link></li>
       </div>
 
       <div class="closeMenu">

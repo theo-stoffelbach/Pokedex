@@ -12,7 +12,7 @@
   >
     <div class="container">
       <div class="header">
-        <h1>Register</h1>
+        <h1>login</h1>
       </div>
       <div class="main">
         <form>
@@ -32,10 +32,9 @@
               v-model="password"
             /> </span
           ><br />
-          <p>Already have an account ? <router-link to="Login">Login</router-link></p>
+              <p>Don't have an account already ? <router-link to="register">Register</router-link></p>
   <br>
-
-            <button @click="Register">Register</button><br>
+            <button @click="login">login</button><br>
 
         </form>
       </div>
@@ -46,32 +45,35 @@
 
 
 <script>
-import firebase from 'firebase';
+import firebase from "firebase";
 
 export default {
-    name: "Register",
-    data() {
-        return {
-            email:"",
-            password:"",
-            initals:"",
-        }
+  name: "Login",
+  data() {
+    return {
+      email: "",
+      password: "",
+      initals: "",
+    };
+  },
+  methods: {
+    login() {
+      firebase
+        .auth()
+        .signInWithEmailAndPassword(this.email, this.password)
+        .then(
+          (user) => {
+            console.log(user);
+          },
+          (err) => {
+            alert(err);
+          }
+        );
     },
-    methods: {
-        Register() {
-            console.log("ddeddeed")
-            firebase.auth().createUserWithEmailAndPassword(this.email, this.password)
-            .then((user) => {
-                console.log(user)
-            },
-            (err) => {
-                alert(err)
-            }
-            )
-        }
-    }
-}
+  },
+};
 </script>
+
 
 
 <style scoped>
