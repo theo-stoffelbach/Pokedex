@@ -1,4 +1,6 @@
 <template>
+  <div class="header_margin"></div>
+
   <Header />
  
 </template>
@@ -22,6 +24,15 @@ export default {
 </script>
 
 <style>
+.header_margin {
+  height: 1px;
+  width: 1px;
+  margin-bottom: 3em;
+}
+
+h1 {
+  color : #FFF;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

@@ -1,6 +1,11 @@
 <template>
     <h1>Pokedex</h1>
     <div class='center'><div class="bar"></div></div>
+
+<form id="searchbar" @submit.prevent="setPokemonUrl">
+    <input id="searchinput" type="text" v-model="searchvalue">
+</form>
+
     <div class="grille test">
       <article v-for="(pokemon, index) in pokemons" :key="'poke' + index">
         <div class="card item-grey">
@@ -147,7 +152,7 @@ body {
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-bottom: 100px;
+    margin-bottom: 30px;
 }
 
 .bar {
@@ -162,6 +167,23 @@ h1 {
   font-size: 40px;
   font-family: Arial, Helvetica, sans-serif;
   margin: 25px 25px;
+}
+
+#searchinput {
+  width: 300px;
+  height: 50px;
+  border-radius: 15px;
+}
+
+#searchbar {
+  min-width: 1500px;
+  width: 50%;
+  height: auto;
+  margin: 0 auto;
+      margin-bottom: 75px;
+
+
+  justify-content: center;
 }
 
 .grille {

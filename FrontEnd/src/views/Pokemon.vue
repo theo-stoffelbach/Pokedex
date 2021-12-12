@@ -139,7 +139,7 @@ export default {
 }
 h1 {
   font-size: 42px;
-  color: rgb(0, 0, 88);
+  color: #FFF;
 }
 .Text {
   margin: 20px 0;
