@@ -1,27 +1,48 @@
 <template>
   <body>
     <div id="container1" style="margin-top: 4em">
-      <div>
-        <p class="item_pik">Pikachu</p>
-        <div class="pik_img"><img src="../assets/team/pik_img.png" /></div>
-      </div>
-
-      <p class="item_cha">Charmander</p>
+        
+        <div>
+            <div class="pik_img"><img src="../assets/team/pik_img.png" /></div>
+            <p class="item_pik">Pikachu</p>
+        </div>
+        
+        <div>
+            <div class ="cha_img"><img src="../assets/team/cha_img.png" /></div>
+            <p class="item_cha">Charmander</p>
+        </div>
     </div>
+    
     <div id="container2" style="margin-top: 2em">
-      <p class="item_pid">Pidgey</p>
-      <p class="item_bul">Bulbasaure</p>
+
+        <div>
+            <div class ="pid_img"><img src="../assets/team/pid_img.png" /></div>
+            <p class ="item_pid">Pidgey</p>
+        </div>
+        
+        <div>
+            <div class ="pid_img"><img src="../assets/team/bul_img.png" /></div>
+            <p class ="item_pid">Bulbasaure</p>
+        </div>
+
     </div>
+
     <div id="container3" style="margin-top: 2em">
-      <p class="item_sqr">Squirtle</p>
-      <p class="item_bla">Blastoise</p>
+        <div>
+            <div class ="sqr_img"><img src="../assets/team/sqr_img.png" /></div>
+            <p class ="item_pid">Squirtle</p>
+        </div>
+        
+        <div>
+            <div class ="bla_img"><img src="../assets/team/bla_img.png" /></div>
+            <p class ="item_pid">Blastoise</p>
+        </div>
+
     </div>
-    <!-- <div class="pik_img"><img src="../assets/team/pik_img.png" /></div> -->
-    <div class="cha_img"><img src="../assets/team/cha_img.png" /></div>
-    <div class="pid_img"><img src="../assets/team/pid_img.png" /></div>
-    <div class="bul_img"><img src="../assets/team/bul_img.png" /></div>
-    <div class="sqr_img"><img src="../assets/team/sqr_img.png" /></div>
-    <div class="bla_img"><img src="../assets/team/bla_img.png" /></div>
+
+    <div id = "grid" style="margin-top: 2em">
+        
+    </div>
   </body>
 </template>
 
@@ -106,15 +127,55 @@ body {
   width: 8em;
   height: 2em;
 }
-/*make responsive img*/
+/* -- IMG --*/
+/* make margin in _img*/
 .pik_img {
   position: relative;
 }
 .pik_img img {
   position: absolute;
-  top: -65px;
   left: 25px;
   width: 60px;
+}
+.cha_img {
+    position: relative;
+}
+.cha_img img {
+    position: absolute;
+    left: 25px;
+    width: 57px;
+}
+.pid_img {
+  position: relative;
+}
+.pid_img img {
+    position: absolute;
+    left: 25px;
+    width: 57px;
+}
+.sqr_img {
+    position: relative;
+}
+.sqr_img img {
+    position: absolute;
+    left: 25px;
+    width: 57px;
+}
+.bla_img {
+    position: relative;
+}
+.bla_img img {
+    position: absolute;
+    left: 25px;
+    width: 57px;
+}
+.bul_item {
+    position: relative;
+}
+.bul_item img {
+    position: absolute;
+    left: 25px;
+    width: 57px;
 }
 @media screen and (max-width: 768px) {
   #container1 {
