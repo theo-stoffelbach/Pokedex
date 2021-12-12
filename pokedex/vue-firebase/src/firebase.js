@@ -1,5 +1,5 @@
 import firebase from 'firebase'
-import { ref, onUnmounted } from 'vue' 33.7K (gzipped:13.2K)
+import { ref, onUnmounted } from 'vue'
 
 const config = {
     apiKey: "AIzaSyBZqiKxOaKx5oE02MGxUEpjxj0n8CxhhLQ",
