@@ -1,6 +1,5 @@
 <template>
-    <h1>Friend</h1>
-    <p>{{id}}</p>
+  <div class ="poke_img"><img src ="../assets/friend/pokeball_img.png"></div>
 </template>
 
 <script>
@@ -10,8 +9,15 @@ export default ({
 })
 </script>
 
-<style scoped>
-body {  
-  background-image: none;
+<style>
+.poke_img {
+  border-bottom: red 2px solid;
+  
+  margin-top: 5em;
+  display: flex;
+  justify-content: flex-end;
+}
+.poke_img img {
+  width: 140px;
 }
 </style>
