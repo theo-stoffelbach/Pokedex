@@ -11,15 +11,29 @@
 </template>
 
 <script>
+    import db from './firebaseInit'
     export default{
         name: "dashboard",
         data (){
             return {
-                employees:[]
+                employees: []
             }
+             
             },
-            create (){
+            created (){
+                db.collection("employees").get().then(querySnapshot => {
+                    querySnapshot.forEach(doc =>{
+                        const data ={
+                            'id': doc.id,
+                            'employee_id': doc.data().employee_id,
+                            'name': doc.data().name,
+                            'dept':doc.data().dept,
+                            'position':doc.data().position
 
+                        }
+                    })
+                })
             }
-    }
+            
+}
 </script>
